@@ -3,6 +3,7 @@
 # Project metafiles
 .project
 .pydevproject
+.settings/
 
 # Packages
 *.egg
