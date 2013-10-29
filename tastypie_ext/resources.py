@@ -1,5 +1,5 @@
-from django.contrib.auth.models import User          
 from django.conf.urls.defaults import url
+from django.contrib.auth import get_user_model
 
 from tastypie import http
 from tastypie import fields
@@ -25,7 +25,7 @@ class UserResource(ModelResource):
     """
     
     class Meta:
-        queryset = User.objects.all()
+        queryset = get_user_model().objects.all()
         resource_name = 'user'
         
         fields = settings.TASTYPIE_EXT_USERRESOURCE_FIELDS
