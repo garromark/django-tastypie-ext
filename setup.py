@@ -4,7 +4,7 @@ from setuptools import setup
 if __name__ == '__main__':
     setup(
         name = 'django-tastypie-ext',
-        version = '0.1.1',
+        version = '0.1',
         description = "Various tastypie extensions, authentication methods, etc.",
         long_description = open('README.rst', 'r').read(),
         author = 'Adam Ever-Hadani',
@@ -21,6 +21,5 @@ if __name__ == '__main__':
             'Django>=1.4',
             'django-tastypie>=0.9.11',
             'Django-facebook',
-            'South',
         ),
     )
