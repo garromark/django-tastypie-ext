@@ -27,3 +27,6 @@ nosetests.xml
 # Backup file, editors
 *.swp
 *~
+
+# SQLite Databases
+*.db

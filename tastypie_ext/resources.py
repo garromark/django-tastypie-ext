@@ -10,8 +10,8 @@ from tastypie.authentication import BasicAuthentication
 from tastypie.authorization import Authorization, ReadOnlyAuthorization, DjangoAuthorization
 
 # These are based on the tastypie fork
-from tastypie.models import ApiToken
-from tastypie.authentication import ApiTokenAuthentication
+from tastypie_ext.models import ApiToken
+from tastypie_ext.authentication import ApiTokenAuthentication
 
 import tastypie_ext.settings as settings 
 from tastypie_ext.authentication import *
