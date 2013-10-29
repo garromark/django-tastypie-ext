@@ -15,7 +15,7 @@ if 'django.contrib.auth' in settings.INSTALLED_APPS:
     import uuid
     
     class ApiToken(models.Model):
-        user = models.ForeignKey(User, related_name='api_tokens')
+        user = models.ForeignKey(settings.AUTH_USER_MODEL, related_name='api_tokens')
         token = models.CharField(max_length=256, blank=True, default='')
         last = models.DateTimeField(auto_now_add=True)
     
