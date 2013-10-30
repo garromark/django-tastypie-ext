@@ -118,7 +118,6 @@ class GETAPITokenAuthenticationResource(ModelResource):
     def _create_token(self, request, **kwargs):
         """Validate using BasicAuthentication, and create Api Token
         if authenticated"""
-        print request
         self.method_check(request, allowed=['get'])
         self.is_authenticated(request)
         self.throttle_check(request)
