@@ -1,9 +1,10 @@
 from django.conf import settings
-from django.db import models
 from django.contrib.auth.models import User
-
+from django.db import models
+from django.utils.timezone import now
 import datetime
 import hmac
+
 
 try:
     from hashlib import sha1
@@ -39,7 +40,7 @@ if 'django.contrib.auth' in settings.INSTALLED_APPS:
     
             return super(ApiToken, self).save(*args, **kwargs)
     
-        def is_valid(self, now=datetime.datetime.now()):
+        def is_valid(self, now=now()):
             " Check if token is still valid."
     
             # Get valid period.
