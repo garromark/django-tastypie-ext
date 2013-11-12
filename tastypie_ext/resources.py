@@ -43,7 +43,7 @@ class SessionResource(ModelResource):
     
     """
     user = fields.ToOneField(
-        'tastypie_ext.resources.UserResource', 'user', full=True)
+        settings.TASTYPIE_EXT_USERRESOURCE, 'user', full=True)
 
     class Meta(object):
         queryset = ApiToken.objects.all()
@@ -64,7 +64,7 @@ class POSTAPITokenAuthenticationResource(ModelResource):
     """
     
     user = fields.ToOneField(
-        'tastypie_ext.resources.UserResource', 'user', full=True)
+        settings.TASTYPIE_EXT_USERRESOURCE, 'user', full=True)
 
     class Meta(object):
         queryset = ApiToken.objects.all()
@@ -95,7 +95,7 @@ class GETAPITokenAuthenticationResource(ModelResource):
     """
     
     user = fields.ToOneField(
-        'tastypie_ext.resources.UserResource', 'user', full=True)
+        settings.TASTYPIE_EXT_USERRESOURCE, 'user', full=True)
     
     class Meta(object):
         queryset = ApiToken.objects.all()
